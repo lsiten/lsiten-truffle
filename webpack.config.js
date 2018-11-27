@@ -22,7 +22,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const shims2 = '<!--[if lt IE 9]><script type="text/javascript" src="../assets/html5shiv/js/html5shiv.min.js"></script><script type="text/javascript" src="../assets/respond-js/js/respond.min.js"></script><script type="text/javascript" src="../assets/json3/js/json3.min.js"></script><script type="text/javascript" src="../assets/es5-shim/js/es5-shim.js"></script><script type="text/javascript" src="../assets/es5-shim/js/es5-sham.js"></script><![endif]-->';
 
 module.exports = (env, argv) => {
-  const out_base_path = './dist';
+  const out_base_path = './build';
   const in_base_path = 'src';
   const base_path = __dirname;
   const entry_path = `${base_path}/${in_base_path}/js`;
@@ -58,7 +58,7 @@ module.exports = (env, argv) => {
         // hrefPrefix: prod ? '/portal/' : '/',
       },
       template: path.resolve(page),
-      filename: path.resolve(base_path, out_base_path, `${path.join(_pages.dir, `/${_pages.name}`)}.html`),
+      filename: path.resolve(base_path, out_base_path, `${path.join(_pages.dir, `./${_pages.name}`)}.html`),
       inject: false,
     }));
   });

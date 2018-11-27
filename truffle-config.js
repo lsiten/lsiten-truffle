@@ -15,4 +15,17 @@
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // to customize your Truffle configuration!
+  networks: {
+    "live": {
+      network_id: 2,        // Official Ethereum test network
+      // host: "178.25.19.88", // Random IP for example purposes (do not use)
+      port: 80
+    },
+    "development": {
+      network_id: 1,        // Official Ethereum test network
+      host: "127.0.0.1", // Random IP for example purposes (do not use)
+      port: 8800
+    }
+  },
+  build: "npm run start"
 };
