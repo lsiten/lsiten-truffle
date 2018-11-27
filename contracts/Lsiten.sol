@@ -1,10 +1,10 @@
-pragma solidity >=0.4.23;
+pragma solidity ^0.4.23;
 
 contract Lsiten {
   address public owner;
   uint public testNum;
 
-  constructor() public {
+  constructor () public {
     owner = msg.sender;
   }
   modifier restricted() {
